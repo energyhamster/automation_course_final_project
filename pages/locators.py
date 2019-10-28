@@ -9,8 +9,8 @@ class LoginPageLocators():
     REGISTRATION_FORM = (By.ID, "register_form")
 
 class ProductPageLocators():
-    PRODUCT_NAME_ON_PRODUCT_PAGE = (By.XPATH, '//h1[text()="The shellcoder\'s handbook"]')
-    PRODUCT_PRICE_ON_PRODUCT_PAGE = (By.CLASS_NAME, "price_color")
+    PRODUCT_NAME = (By.XPATH, '//h1[text()="The shellcoder\'s handbook"]')
     PRODUCT_PAGE_SUBMIT_BUTTON = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
-    PRODUCT_NAME_IN_BASKET = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
-    PRODUCT_PRICE_IN_BASKET = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
+    PRODUCT_NAME_IN_BASKET = (By.XPATH, '//strong[contains(text(), "The shellcoder\'s handbook")]')
+    PRODUCT_PRICE = (By.XPATH, "//p[@class='price_color']")
+    PRODUCT_PRICE_IN_BASKET = (By.XPATH, "//div[@class='alertinner ']/p/strong")
