@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
-import time
 
 
 class ProductPage(BasePage):
@@ -20,8 +19,8 @@ class ProductPage(BasePage):
 
     def should_be_correct_product_in_basket(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        product_in_basket = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_BASKET).text
-        assert product_name == product_in_basket, "Incorrect product in basket after adding"
+        add_product_in_basket = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME_IN_BASKET).text
+        assert product_name in add_product_in_basket, "Incorrect product in basket after adding"
 
     def should_be_correct_price_in_basket(self):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
