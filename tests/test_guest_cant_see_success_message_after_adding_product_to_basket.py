@@ -1,7 +1,7 @@
 from pages.product_page import ProductPage
 import pytest
 
-links = ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
+links = ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/",
         ]
 
 @pytest.mark.parametrize("product", links)
