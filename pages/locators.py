@@ -14,3 +14,4 @@ class ProductPageLocators():
     PRODUCT_NAME_IN_BASKET = (By.CSS_SELECTOR, '#messages > div.alert:nth-child(1) .alertinner')
     PRODUCT_PRICE = (By.CSS_SELECTOR, "p.price_color")
     PRODUCT_PRICE_IN_BASKET = (By.CSS_SELECTOR, "#messages > div.alert:nth-child(3) strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "//div[@id='messages']//div[1]/div//strong//following-sibling::text()")
